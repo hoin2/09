@@ -5,16 +5,16 @@
 
 int main() {
 	int i;
-	int grade[SIZE];
-	int score[SIZE];
+	int a[SIZE]={1,2,3,4,5};
+	int b[SIZE]={1,2,3,4,5};
+	int flag_same=1;
 	
 	for(i=0;i<SIZE;i++){
-		grade[i]=rand()%100;
-		score[i]=grade[i];
+		if(a[i]!=b[i]){
+			printf("a[%d],b[%d] 배열은 서로 다른 값을 가집니다.\n",i,i);
+			flag_same=0;
+			}
 	}
-	
-	for(i=0;i<SIZE;i++)
-		printf("score[%d]=%d\n",i,score[i]);
 		
 	return 0;
 }
